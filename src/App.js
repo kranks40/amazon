@@ -1,6 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Route, Router, Switch } from 'react-router-dom';
+import { BrowserRouter as Router,Switch, Route } from 'react-router-dom';
 import './App.css';
+import Checkout from './Checkout';
 import Header from './Header';
 import Home from './Home';
 
@@ -13,8 +14,9 @@ function App() {
       <Switch>
         <Route path='/checkout'>
           <Header/>
-          <h1>This is the checkout page!</h1>
+          <Checkout/>
         </Route>
+
         <Route path='/'>
           <Header/>
           <Home/>
