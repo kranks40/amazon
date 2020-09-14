@@ -13,7 +13,7 @@ function Header() {
             src='http://pngimg.com/uploads/amazon/amazon_PNG11.png'alt=''/>
 
             <div className="header__search">
-                <input className='header__searchInput' type='text' placeholder='Search Amazon' aria-label data-aria-clear-label='Clear search keywords' name='k' autoComplete='off' autoCorrect='off' autoCapitalize='off' dir='auto'/>
+                <input className='header__searchInput' type='text' placeholder='Search Amazon'  data-aria-clear-label='Clear search keywords' name='k' autoComplete='off' autoCorrect='off' autoCapitalize='off' dir='auto'/>
                 <SearchIcon className='header__searchIcon'/>
             </div>
 
