@@ -2,13 +2,14 @@ import { Button } from '@material-ui/core';
 import React from 'react';
 import './Product.css';
 import { useStateValue } from './StateProvider';
+import FlipMove from 'react-flip-move';
 
 function Product({title, price, rating, image, id}) {
     const [{ basket }, dispatch] = useStateValue();
 
     const addToBasket = () => {
         // dispatch the item into the data layer
-        dispatch({
+            dispatch({
             type: 'ADD_TO_BASKET',
             item: {
                 id:id,
@@ -17,10 +18,12 @@ function Product({title, price, rating, image, id}) {
                 price: price,
                 rating: rating,
             },
-        });
+        });  
     };
 
     return (
+
+        <FlipMove>
         <div className='product'>
             <div className="product__info">
                 <p>{title}</p>
@@ -41,7 +44,9 @@ function Product({title, price, rating, image, id}) {
             src={image} alt=''/>
                 <Button onClick={addToBasket}>Add to Basket</Button>
         </div>
+        </FlipMove>
     );
 }
+
 
 export default Product;
