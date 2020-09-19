@@ -6,8 +6,11 @@ import { Button } from "@material-ui/core";
 import { useStateValue } from './StateProvider';
 import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
 import { getBasketTotal } from "./reducer";
+import { useHistory } from "react-router-dom";
+import { Payment } from "@material-ui/icons";
 
 function Subtotal() {
+  const  history = useHistory();
   const [{ basket}, dispatch] = useStateValue();
   return (
     <div className="subtotal">
@@ -31,7 +34,7 @@ function Subtotal() {
         prefix={"$EC "}
       />
 
-      <Button>Proceed to Checkout</Button>
+      <Button onClick={e => history.push('/Payment')}>Proceed to Checkout</Button>
     </div>
   );
 }
