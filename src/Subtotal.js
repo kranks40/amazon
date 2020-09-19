@@ -1,13 +1,12 @@
 import React from "react";
 import "./Subtotal.css";
 import CurrencyFormat from "react-currency-format";
-//import { ShoppingBasketOutlined } from "@material-ui/icons";
 import { Button } from "@material-ui/core";
 import { useStateValue } from './StateProvider';
 import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
 import { getBasketTotal } from "./reducer";
 import { useHistory } from "react-router-dom";
-import { Payment } from "@material-ui/icons";
+
 
 function Subtotal() {
   const  history = useHistory();
@@ -34,7 +33,7 @@ function Subtotal() {
         prefix={"$EC "}
       />
 
-      <Button onClick={e => history.push('/Payment')}>Proceed to Checkout</Button>
+      <Button onClick={e => history.push('/payment')}>Proceed to Checkout</Button>
     </div>
   );
 }

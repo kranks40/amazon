@@ -7,7 +7,7 @@ import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import CurrencyFormat from 'react-currency-format';
 import { getBasketTotal } from './reducer';
 //import { Button } from '@material-ui/core';
-import axios from 'axios';
+import axios from './axios';
 import { db } from './firebase';
 
 function Payment() {
