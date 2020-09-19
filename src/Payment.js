@@ -6,7 +6,7 @@ import { useStateValue } from './StateProvider';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import CurrencyFormat from 'react-currency-format';
 import { getBasketTotal } from './reducer';
-import { Button } from '@material-ui/core';
+//import { Button } from '@material-ui/core';
 import axios from 'axios';
 import { db } from './firebase';
 
@@ -130,9 +130,9 @@ function Payment() {
                                     displayType={'text'}
                                     prefix={'$'}
                                     />
-                                    <Button disabled={processing || disabled || succeeded }>
+                                    <button disabled={processing || disabled || succeeded }>
                                         <span>{processing ? <p>Processing</p> : 'Buy Now'}</span>
-                                    </Button>
+                                    </button>
                                 </div>
                                 
                             </form>

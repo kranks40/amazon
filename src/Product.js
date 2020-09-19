@@ -2,7 +2,7 @@ import { Button } from '@material-ui/core';
 import React from 'react';
 import './Product.css';
 import { useStateValue } from './StateProvider';
-import FlipMove from 'react-flip-move';
+//import FlipMove from 'react-flip-move';
 
 function Product({title, price, rating, image, id}) {
     const [{ basket }, dispatch] = useStateValue();
@@ -23,7 +23,7 @@ function Product({title, price, rating, image, id}) {
 
     return (
 
-        <FlipMove>
+        
         <div className='product'>
             <div className="product__info">
                 <p>{title}</p>
@@ -44,7 +44,7 @@ function Product({title, price, rating, image, id}) {
             src={image} alt=''/>
                 <Button onClick={addToBasket}>Add to Basket</Button>
         </div>
-        </FlipMove>
+        
     );
 }
 

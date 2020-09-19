@@ -20,17 +20,20 @@ function App() {
   const [{}, dispatch] = useStateValue();
 
   useEffect(() => {
+    // will only run once when the app component loads...
     auth.onAuthStateChanged(authUser => {
       if (authUser) {
           dispatch({
             type: 'SET_USER',
             user: authUser
-          })
+          });
       } else {
+        // the user is logged out
+
         dispatch({
           type: 'SET_USER',
           user: null
-        })
+        });
 
       }
     })
@@ -47,6 +50,7 @@ function App() {
         </Route>
 
         <Route path='/orders'>
+          <Header/>
         <Orders/>
         </Route>
 
